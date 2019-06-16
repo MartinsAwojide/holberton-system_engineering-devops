@@ -1,0 +1,2 @@
+#!/bin/bash
+sort -s | find -type f -name "*.gif" -printf '%f\n'
