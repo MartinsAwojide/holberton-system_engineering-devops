@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Displays Holberton School 10 times 'bad luck' in 4th iteration and 'good luck' in 8th iteration
+i="0"
+
+while [ $i -lt 10 ]
+do
+	echo "Holberton School"
+	if [ $i -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $i -eq 8 ]
+	then
+		echo "good luck"
+	fi
+	i=$((i+1))
+done
