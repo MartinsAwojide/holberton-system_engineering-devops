@@ -2,7 +2,7 @@
 # Script that displays To infinity and beyond catch SIGTERM
 while ((1))
 do
-	trap "echo I am invicible!!!" SIGTERM	
+	trap "echo I am invincible!!!" SIGTERM	
 	echo "To infinity and beyond"
 	sleep 2
 done
