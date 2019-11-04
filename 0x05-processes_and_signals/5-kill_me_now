@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Kill specific process using kill command
+var="$(pidof -s bash ./4-to_infinity_and_beyond)"
+for i in $var
+do
+	kill "$i"
+done
