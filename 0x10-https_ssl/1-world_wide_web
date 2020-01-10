@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2086
+# Dig the subdomain and show info
+func ()
+{
+    domain="$1"
+    if [ "$2" ]
+    then
+	subdomain="$2"
+    else
+	subdomain="www lb-01 web-01 web-02"
+    fi
+    for sub in $subdomain
+    do
+	echo -n "The subdomain $sub"
+	dig $sub.$domain | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print " is a " $4 " record and points to " $5}'
+    done
+}
+
+func "$1" "$2"
