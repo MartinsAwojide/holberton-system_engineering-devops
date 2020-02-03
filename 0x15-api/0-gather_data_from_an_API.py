@@ -24,7 +24,7 @@ if __name__ == "__main__":
         if task['completed']:
             my_list.append(task)
 
-    print("Employee {} is done with task({}/{}):".format(user[0]["name"],
+    print("Employee {} is done with tasks({}/{}):".format(user[0]["name"],
           len(my_list), len(todos)))
     if len(my_list) > 0:
         for task in my_list:
