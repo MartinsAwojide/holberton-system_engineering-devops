@@ -3,9 +3,9 @@
 A Python script that, using this REST API, for a given employee ID, returns
 information about his/her TODO list progress.
 """
-
 import requests
 import sys
+
 
 if __name__ == "__main__":
 
@@ -24,8 +24,8 @@ if __name__ == "__main__":
         if task['completed']:
             my_list.append(task)
 
-    print("Employee {} is donde with task({}/{})".format(user[0]["name"],
+    print("Employee {} is done with task({}/{}):".format(user[0]["name"],
           len(my_list), len(todos)))
     if len(my_list) > 0:
         for task in my_list:
-            print("\t {}".format(task['title']))
+            print("\t {}".format(task.get('title')))
