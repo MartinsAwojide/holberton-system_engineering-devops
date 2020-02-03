@@ -28,4 +28,4 @@ if __name__ == "__main__":
           len(my_list), len(todos)))
     if len(my_list) > 0:
         for task in my_list:
-            print("\t {}".format(task.get('title')))
+            print("\t {}".format(task['title']))
